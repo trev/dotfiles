@@ -15,12 +15,17 @@ Plugin 'gmarik/vundle'
 Plugin 'altercation/vim-colors-solarized'
 
 " Functionality
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'Lokaltog/powerline'
-Plugin 'kchmck/vim-coffee-script'
+Plugin 'vim-ruby/vim-ruby' " Ruby helper
+Plugin 'tpope/vim-git' " Syntax highlighting for git files
+Plugin 'tpope/vim-surround' " Give shortcut commands for automatice surrounding tags, brackets, quotes...
+Plugin 'tpope/vim-fugitive' " Git command helper
+Plugin 'tpope/vim-bundler' " Bundler helper
+Plugin 'tpope/vim-rails' " Rails helper 
+Plugin 'tpope/vim-vinegar' " File browser
+Plugin 'tpope/vim-haml' " Syntax highlighting for HAML
+Plugin 'airblade/vim-gitgutter' " Show git line change status in gutter
+Plugin 'Lokaltog/powerline' " The cool status bar at the bottom of a vim pane
+Plugin 'kchmck/vim-coffee-script' " Coffeescript helper
 
 " Initialize powerline
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
