@@ -26,6 +26,7 @@ Plugin 'tpope/vim-haml' " Syntax highlighting for HAML
 Plugin 'airblade/vim-gitgutter' " Show git line change status in gutter
 Plugin 'Lokaltog/powerline' " The cool status bar at the bottom of a vim pane
 Plugin 'kchmck/vim-coffee-script' " Coffeescript helper
+Plugin 'kien/ctrlp.vim' " Fuzzyfinder
 
 " Initialize powerline
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
@@ -100,23 +101,11 @@ map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
 "Custom mappings
-map <leader>fb :FufBuffer<cr>
-map <leader>ff :FufFile<cr>
-map <leader>fc :FufCoverageFile<cr>
 map <leader>ht :set filetype=html<cr>
 map <leader>ph :set filetype=php<cr>
-
-" Enable MakeGreencOSX clipboard
-set clipboard=unnamed
-
-" Tagbar ( http://majutsushi.github.com/tagbar/ )
-nmap <F8> :TagbarToggle<CR>
 
 " Automatic fold settings for specific files. Uncomment to use.
 " autocmd FileType ruby setlocal foldmethod=syntax
 " autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
-
-" For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
-autocmd BufNewFile,BufRead *_spec.rb compiler rspec
 
 highlight clear SignColumn
