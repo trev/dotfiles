@@ -73,6 +73,11 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # Aliases
 alias ls="ls -alh"
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+alias gs="git status"
+alias gaa="git add ."
+alias gc="git commit -a"
+alias gcm="git commit -am"
+
 
 # Color ls
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
