@@ -101,10 +101,11 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
-"Custom mappings
+" Custom mappings
 map <leader>ht :set filetype=html<cr>
 map <leader>ph :set filetype=php<cr>
 let g:ctrlp_cmd = 'CtrlPMixed'
+inoremap pry<tab> binding.pry
 
 " Automatic fold settings for specific files. Uncomment to use.
 autocmd FileType ruby setlocal foldmethod=syntax
