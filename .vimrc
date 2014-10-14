@@ -28,6 +28,10 @@ Plugin 'Lokaltog/powerline' " The cool status bar at the bottom of a vim pane
 Plugin 'kchmck/vim-coffee-script' " Coffeescript helper
 Plugin 'kien/ctrlp.vim' " Fuzzyfinder
 Plugin 'mileszs/ack.vim' " Ack search
+Plugin 'MarcWeber/vim-addon-mw-utils' " Snipmate dependency
+Plugin 'tomtom/tlib_vim' " Snipmate dependency
+Plugin 'garbas/vim-snipmate' " Snippet tool
+Plugin 'honza/vim-snippets' " Snippets
 
 " Initialize powerline
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
