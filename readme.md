@@ -7,9 +7,10 @@ Usage (cause I'll forget):
 * `$ git clone git://github.com/trev/dotfiles.git`
 * `$ cd dotfiles`
 * `$ dottor symlink default`
+* `$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+* `$ vim +PluginInstall +qall`
 * Double click on the font and install
 * Change iTerm2 font to the newly installed font
 * `$ vim`
-* Ignore all the vim errors and warnings and run `:PluginInstall`
 * Exit everything, restart iTerm2
 * Drink

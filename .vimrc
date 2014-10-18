@@ -2,11 +2,10 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
-"let path = '~/some/path/here'
-"call vundle#rc(path)
+"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
@@ -32,6 +31,8 @@ Plugin 'MarcWeber/vim-addon-mw-utils' " Snipmate dependency
 Plugin 'tomtom/tlib_vim' " Snipmate dependency
 Plugin 'garbas/vim-snipmate' " Snippet tool
 Plugin 'honza/vim-snippets' " Snippets
+
+call vundle#end()
 
 " Initialize powerline
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
