@@ -95,6 +95,9 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=99
 
+" Copy to OSX clipboard
+set clipboard=unnamed
+
 " Tab mappings.
 map <leader>tt :tabnew<cr>
 map <leader>te :tabedit
