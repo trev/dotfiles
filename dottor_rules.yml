@@ -4,3 +4,5 @@ default:
   target: ~/.vimrc
 - source: .zshrc
   target: ~/.zshrc
+- source: .npmrc
+  target: ~/.npmrc

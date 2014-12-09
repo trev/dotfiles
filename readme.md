@@ -3,6 +3,7 @@
 Usage (cause I'll forget):
 
 * `$ cd ~`
+* `$ mkdir "${HOME}/.npm-packages"`
 * `$ gem install dottor`
 * `$ git clone git://github.com/trev/dotfiles.git`
 * `$ cd dotfiles`

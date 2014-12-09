@@ -82,8 +82,10 @@ alias ls="ls -alh"
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias gs="git status"
 alias gaa="git add ."
+alias gar="git add -u" # http://stackoverflow.com/questions/492558/removing-multiple-files-from-a-git-repo-that-have-already-been-deleted-from-disk#1402793
 alias gc="git commit -a"
-alias gcm="git commit -am"
+alias csd="cap staging deploy"
+alias cpd="cap production deploy"
 
 # Color ls
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
@@ -91,5 +93,12 @@ export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 # Color grep
 export GREP_OPTIONS='--color=auto'
 
+# Chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
+
+# NPM without sudo (https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md)
+NPM_PACKAGES="${HOME}/.npm-packages"
+PATH="$NPM_PACKAGES/bin:$PATH"
+unset MANPATH # delete if you already modified MANPATH elsewhere in your config
+MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
