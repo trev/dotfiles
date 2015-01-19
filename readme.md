@@ -15,3 +15,12 @@ Usage (cause I'll forget):
 * `$ vim`
 * Exit everything, restart iTerm2
 * Drink
+
+Ok, now that you've had a drink, time to get some sexy Ruby loving
+
+* Install [chruby](https://github.com/postmodern/chruby)
+* Don't foget to setup [auto-switching](https://github.com/postmodern/chruby)
+* Check and apply the [intergations](https://github.com/postmodern/chruby#integration) of choice
+* Especially important is to complete the [Vim](https://github.com/postmodern/chruby/wiki/Vim) integration or Vim will run using the system Ruby and cause all sorts of problems with plugins like rails.vim.
+
+Finally, some [good reading](https://github.com/sstephenson/rbenv/wiki/Unix-shell-initialization) about shell initialization and the $PATH variable
