@@ -87,6 +87,12 @@ alias gc="git commit -a"
 alias csd="cap staging deploy"
 alias cpd="cap production deploy"
 
+# Function to copy ssh public key to authorized_keys
+# Usage: cpssh user@someserver.com
+cpssh () {
+  cat ~/.ssh/id_rsa.pub | ssh $@ "mkdir -p ~/.ssh && cat >>  ~/.ssh/authorized_keys"
+}
+
 # Color ls
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 
