@@ -192,3 +192,7 @@ nnoremap <silent> <Plug>Kwbd :<C-u>Kwbd<CR>
 
 " Create a mapping (e.g. in your .vimrc) like this:
 map <leader>q <Plug>Kwbd
+
+" Keep Vim from becoming unbareably slow when displaying long lines
+" Especially bad with data URIs to represent images in CSS files
+set synmaxcol=150
