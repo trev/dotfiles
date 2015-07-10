@@ -1,5 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
+runtime macros/matchit.vim    " Run vim
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -15,6 +16,7 @@ Plugin 'altercation/vim-colors-solarized'
 
 " Functionality
 Plugin 'vim-ruby/vim-ruby' " Ruby helper
+Plugin 'geoffharcourt/vim-matchit' " Matchit.vim
 Plugin 'tpope/vim-git' " Syntax highlighting for git files
 Plugin 'tpope/vim-surround' " Give shortcut commands for automatice surrounding tags, brackets, quotes...
 Plugin 'tpope/vim-fugitive' " Git command helper

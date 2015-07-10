@@ -78,6 +78,7 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias git=hub
 alias ls="ls -alh"
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias gs="git status"
