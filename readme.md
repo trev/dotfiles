@@ -16,6 +16,9 @@ Usage (cause I'll forget):
 * Exit everything, restart iTerm2
 * Drink
 
+Too many individual commands? How about a one liner for the first 8 commands:
+`$ cd ~ && mkdir "${HOME}/.npm-packages" && gem install dottor && git clone git://github.com/trev/dotfiles.git && cd dotfiles && dottor symlink default && git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vim +PluginInstall +qall`
+
 Ok, now that you've had a drink, time to get some sexy Ruby loving
 
 * Install [chruby](https://github.com/postmodern/chruby)
