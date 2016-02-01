@@ -80,7 +80,6 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias git=hub
 alias ls="ls -alh"
-alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias gs="git status"
 alias gaa="git add ."
 alias gar="git add -u" # http://stackoverflow.com/questions/492558/removing-multiple-files-from-a-git-repo-that-have-already-been-deleted-from-disk#1402793
