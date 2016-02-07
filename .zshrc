@@ -64,6 +64,10 @@ else
   export EDITOR='mvim'
 fi
 
+# Set the CLI to vi mode instead of emacs
+# This allows us to use the CLI like vim. Awesome!
+set -o vi
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
