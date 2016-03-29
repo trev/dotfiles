@@ -18,7 +18,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-ruby/vim-ruby' " Ruby helper
 Plugin 'geoffharcourt/vim-matchit' " Matchit.vim
 Plugin 'tpope/vim-git' " Syntax highlighting for git files
-Plugin 'tpope/vim-surround' " Give shortcut commands for automatice surrounding tags, brackets, quotes...
+Plugin 'tpope/vim-surround' " Give shortcut commands for automatic surrounding tags, brackets, quotes...
 Plugin 'tpope/vim-fugitive' " Git command helper
 Plugin 'tpope/vim-bundler' " Bundler helper
 Plugin 'tpope/vim-rails' " Rails helper 
@@ -33,6 +33,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils' " Snipmate dependency
 Plugin 'tomtom/tlib_vim' " Snipmate dependency
 Plugin 'garbas/vim-snipmate' " Snippet tool
 Plugin 'honza/vim-snippets' " Snippets
+Plugin 'joonty/vdebug' " Debugging tool, supports XDebug
 
 call vundle#end()
 
