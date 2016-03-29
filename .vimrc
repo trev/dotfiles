@@ -34,6 +34,7 @@ Plugin 'tomtom/tlib_vim' " Snipmate dependency
 Plugin 'garbas/vim-snipmate' " Snippet tool
 Plugin 'honza/vim-snippets' " Snippets
 Plugin 'joonty/vdebug' " Debugging tool, supports XDebug
+Plugin 'craigemery/vim-autotag' " Auto-update ctags files
 
 call vundle#end()
 

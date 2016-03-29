@@ -9,6 +9,7 @@
 * Install [MacVim](http://stackoverflow.com/questions/21012203/gvim-or-macvim-in-mac-os-x#answer-21012284)
 * Install [chruby](https://github.com/postmodern/chruby) and check the notes at the bottom of this readme
 * Install [ruby-install](https://github.com/postmodern/ruby-install) and a version of ruby `ruby-install ruby --latest`
+* Install [ctags](http://ricostacruz.com/til/navigate-code-with-ctags.html) with `$ brew install ctags`
 * Set a default system-wide Ruby to use: `echo "ruby-2.2.3" > ~/.ruby-version`
 * Exit everything, restart iTerm2
 

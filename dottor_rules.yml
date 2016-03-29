@@ -6,3 +6,5 @@ default:
   target: ~/.zshrc
 - source: .npmrc
   target: ~/.npmrc
+- source: .ctags
+  target: ~/.ctags
