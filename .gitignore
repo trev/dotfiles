@@ -2,3 +2,4 @@
 *.swp
 .powenv
 tags
+bundle
