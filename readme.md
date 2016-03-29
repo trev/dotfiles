@@ -43,3 +43,8 @@ I'm trialling [Neovim](https://neovim.io/) alongside Vim. Neovim supports, among
 * Git is aliased to [Hub](https://github.com/github/hub) which adds some syntax sugar to git. Install it with brew: `$ brew install hub`
 
 Finally, some [good reading](https://github.com/sstephenson/rbenv/wiki/Unix-shell-initialization) about shell initialization and the $PATH variable
+
+### Vim/Nvim Plugin notes
+I tried [Unite](https://github.com/Shougo/unite.vim) and addons... whilst it looks awesome it was just too slow.
+There's also [Deoplete](https://github.com/Shougo/deoplete.nvim) which provides async autocompletion on Neovim but I couldn't get it to work properly.
+In the end I stayed with good ol' [CtrlP](https://github.com/ctrlpvim/ctrlp.vim) because it's much faster and just "feels" better. I use CtrlP to fuzzy search through my files, MRU, buffers and tags. I use <C-p> to activate the fuzzy search and <C-f> to change the source (Files, MRU, buffers, tags).
