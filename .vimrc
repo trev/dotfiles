@@ -27,7 +27,6 @@ Plugin 'tpope/vim-haml' " Syntax highlighting for HAML
 Plugin 'airblade/vim-gitgutter' " Show git line change status in gutter
 Plugin 'Lokaltog/powerline' " The cool status bar at the bottom of a vim pane
 Plugin 'kchmck/vim-coffee-script' " Coffeescript helper
-Plugin 'kien/ctrlp.vim' " Fuzzyfinder
 Plugin 'mileszs/ack.vim' " Ack search
 Plugin 'MarcWeber/vim-addon-mw-utils' " Snipmate dependency
 Plugin 'tomtom/tlib_vim' " Snipmate dependency
@@ -35,6 +34,9 @@ Plugin 'garbas/vim-snipmate' " Snippet tool
 Plugin 'honza/vim-snippets' " Snippets
 Plugin 'joonty/vdebug' " Debugging tool, supports XDebug
 Plugin 'craigemery/vim-autotag' " Auto-update ctags files
+Plugin 'Shougo/unite.vim' " Unite, awesome fuzzy finder
+Plugin 'Shougo/neoinclude.vim' " Required by unite-tag
+Plugin 'tsukkee/unite-tag' " Unite addon, adds Ctags as source
 
 call vundle#end()
 
@@ -116,8 +118,8 @@ map <leader>tm :tabmove
 " Custom mappings
 map <leader>ht :set filetype=html<cr>
 map <leader>ph :set filetype=php<cr>
-let g:ctrlp_cmd = 'CtrlPMixed'
 inoremap pry<tab> binding.pry
+nnoremap <C-l> :Unite file file_rec tag buffer<CR>
 
 " Automatic fold settings for specific files. Uncomment to use.
 autocmd FileType ruby setlocal foldmethod=syntax
@@ -199,4 +201,4 @@ map <leader>q <Plug>Kwbd
 
 " Keep Vim from becoming unbareably slow when displaying long lines
 " Especially bad with data URIs to represent images in CSS files
-set synmaxcol=150
+" set synmaxcol=150
