@@ -86,6 +86,7 @@ alias gar="git add -u" # http://stackoverflow.com/questions/492558/removing-mult
 alias gc="git commit -a"
 alias csd="cap staging deploy"
 alias cpd="cap production deploy"
+alias vim="nvim"
 
 # Function to copy ssh public key to authorized_keys
 # Usage: cpssh user@someserver.com

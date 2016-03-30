@@ -138,9 +138,10 @@ map <leader>ht :set filetype=html<cr>
 map <leader>ph :set filetype=php<cr>
 inoremap pry<tab> binding.pry
 
-" Automatic fold settings for specific files. Uncomment to use.
+" Automatic settings for specific file types
 autocmd FileType ruby setlocal foldmethod=syntax
 autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+autocmd FileType php  setlocal foldmethod=indent shiftwidth=4 tabstop=4
 
 " Custom auto commands
 " Jump to last cursor position unless it's invalid or in an event handler
