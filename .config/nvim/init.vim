@@ -117,9 +117,21 @@ let g:ctrlp_show_hidden = 1
 let g:airline_powerline_fonts = 1 " Use powerline fonts so the bar looks good
 let g:airline#extensions#whitespace#enabled = 0 " Don't show whitespace stats
 
-
 " Tagbar settings
 nmap <F8> :TagbarToggle<CR>
+
+" Vdebug settings
+try
+  " Include vdebug mappings if available. Useful when running code in a remote
+  " enviromment like Vagrant/Virtualbox.
+  " Example:
+  " let g:vdebug_options = {
+  " \ 'path_maps': { '/var/www/cool_site': '/Users/cooldude/Sites/cool_site' }
+  " \}
+  source ~/.config/nvim/.vdebug_mappings
+catch
+  " No vdebug mapping, no problem
+endtry
 
 " Custom mappings
 map <leader>ht :set filetype=html<cr>

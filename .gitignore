@@ -3,3 +3,5 @@
 .powenv
 tags
 bundle
+.init.vim-rplugin~
+.vdebug_mappings
