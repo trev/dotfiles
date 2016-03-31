@@ -2,6 +2,7 @@
 *.swp
 .powenv
 tags
-bundle
+bundle/
 .init.vim-rplugin~
 .vdebug_mappings
+session/

@@ -36,6 +36,7 @@ Plugin 'craigemery/vim-autotag' " Auto-update ctags files
 Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy searching
 Plugin 'Valloric/YouCompleteMe' "Autocomplete
 Plugin 'majutsushi/tagbar' " Tagbar
+Plugin 'mhinz/vim-startify' " Save session layouts
 
 call vundle#end()
 
@@ -106,6 +107,9 @@ map <leader>tp :tabprevious<cr>
 map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
+
+" Startify settings
+let g:startify_session_dir = '~/.config/nvim/session'
 
 " CtrlP settings
 let g:ctrlp_extensions = ['tag', 'buffertag']
