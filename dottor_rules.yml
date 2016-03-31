@@ -8,5 +8,5 @@ default:
   target: ~/.npmrc
 - source: .ctags
   target: ~/.ctags
-- source: .config
-  target: ~/.config
+- source: .config/nvim
+  target: ~/.config/nvim
