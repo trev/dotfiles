@@ -109,3 +109,6 @@ NPM_PACKAGES="${HOME}/.npm-packages"
 PATH="$NPM_PACKAGES/bin:$PATH"
 unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
+# added by travis gem
+[ -f /Users/trevorwistaff/.travis/travis.sh ] && source /Users/trevorwistaff/.travis/travis.sh

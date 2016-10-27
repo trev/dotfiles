@@ -37,6 +37,7 @@ Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy searching
 Plugin 'Valloric/YouCompleteMe' "Autocomplete
 Plugin 'majutsushi/tagbar' " Tagbar
 Plugin 'mhinz/vim-startify' " Save session layouts
+Plugin 'shime/vim-livedown' " Preview mardown files in browser
 
 call vundle#end()
 
