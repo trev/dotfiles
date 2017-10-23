@@ -22,6 +22,7 @@ Plugin 'tpope/vim-bundler' " Bundler helper
 Plugin 'tpope/vim-rails' " Rails helper 
 Plugin 'tpope/vim-vinegar' " File browser
 Plugin 'tpope/vim-haml' " Syntax highlighting for HAML
+Plugin 'slim-template/vim-slim' " Syntax highlighting for SLIM
 Plugin 'airblade/vim-gitgutter' " Show git line change status in gutter
 Plugin 'vim-airline/vim-airline' " The cool status bar at the bottom of a vim pane
 Plugin 'vim-airline/vim-airline-themes' " Themes for status bar
