@@ -1,31 +1,26 @@
 # Trev's dotfiles
 
 ## Usage (cause I'll forget):
-I'm trialling [Neovim](https://neovim.io/) alongside Vim. Neovim supports, amongst other things, asynchrony.
+I'm trialling [Neovim](https://neovim.io/). Neovim supports, amongst other things, asynchrony.
 
 ### Starting from a fresh system?
 
 * Install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 * Install [iTerm2](https://www.iterm2.com/)
-* Install [MacVim](http://stackoverflow.com/questions/21012203/gvim-or-macvim-in-mac-os-x#answer-21012284)
 * Install [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim) and enable [Python in Neovim](https://neovim.io/doc/user/nvim_python.html)
-* Install [chruby](https://github.com/postmodern/chruby) and check the notes at the bottom of this readme
+* Install [chruby](https://github.com/postmodern/chruby) and check the notes at the bottom of this readme (you only have to set the source for now as once the `.zshrc` is cloned all the settings are taken care of)
 * Install [ruby-install](https://github.com/postmodern/ruby-install) and a version of ruby `ruby-install ruby --latest`
 * Install [ctags](http://ricostacruz.com/til/navigate-code-with-ctags.html) with `$ brew install ctags`
-* Install [NodeJS](https://nodejs.org/en/download/)
-* Set a default system-wide Ruby to use: `echo "ruby-2.3.0" > ~/.ruby-version`
+* Install NodeJS with [n-install](https://github.com/mklement0/n-install)
+* Set a default system-wide Ruby to use: `echo "ruby-2.4.2" > ~/.ruby-version`
 * Exit everything, restart iTerm2
 
 ### Link up dot files and setup
 * `$ cd ~`
-* `$ mkdir "${HOME}/.npm-packages"`
 * `$ gem install dottor`
 * `$ git clone git://github.com/trev/dotfiles.git`
 * `$ cd dotfiles`
 * `$ dottor symlink default`
-* (vim) `$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
-* (vim) `$ cd ~/.vim/bundle/YouCompleteMe && ./install.py --tern-completer`
-* (vim) `$ vim +PluginInstall +qall` (Ignore the error)
 * (nvim) `$ git clone https://github.com/gmarik/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim`
 * (nvim) `$ nvim +PluginInstall +qall` (Ignore the error)
 * (nvim) `$ cd ~/.config/nvim/bundle/YouCompleteMe && ./install.py --tern-completer`
