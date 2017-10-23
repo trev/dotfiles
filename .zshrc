@@ -45,7 +45,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,8 +84,7 @@ alias gs="git status"
 alias gaa="git add ."
 alias gar="git add -u" # http://stackoverflow.com/questions/492558/removing-multiple-files-from-a-git-repo-that-have-already-been-deleted-from-disk#1402793
 alias gc="git commit -a"
-alias csd="cap staging deploy"
-alias cpd="cap production deploy"
+alias server="WEB_CONCURRENCY=0 foreman start -f Procfile.development"
 alias vim="nvim"
 
 # Function to copy ssh public key to authorized_keys
