@@ -118,6 +118,7 @@ let g:ctrlp_extensions = ['tag', 'buffertag']
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_max_files=0
 
 " Airline settings
 let g:airline_powerline_fonts = 1 " Use powerline fonts so the bar looks good
