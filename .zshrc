@@ -83,9 +83,15 @@ alias ls="ls -alh"
 alias gs="git status"
 alias gaa="git add ."
 alias gar="git add -u" # http://stackoverflow.com/questions/492558/removing-multiple-files-from-a-git-repo-that-have-already-been-deleted-from-disk#1402793
-alias gc="git commit -a"
-alias server="WEB_CONCURRENCY=0 foreman start -f Procfile.development"
+alias gc="git checkout"
+alias gd="git diff"
+alias gpf="git push --force-with-lease"
+alias server="foreman start -f Procfile.development"
 alias vim="nvim"
+alias rtdbp="DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bin/rails db:test:prepare"
+alias rptdbp="DISABLE_DATABASE_ENVIRONMENT_CHECK=1 RACK_ENV=test rake parallel:drop parallel:setup"
+alias rdbdc="DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bin/rails db:drop && DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bin/rails db:create"
+alias rdbdc="DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bin/rails db:drop && DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bin/rails db:create"
 
 # Function to copy ssh public key to authorized_keys
 # Usage: cpssh user@someserver.com
