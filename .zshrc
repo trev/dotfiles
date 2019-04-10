@@ -109,11 +109,5 @@ export GREP_OPTIONS='--color=auto'
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
-# NPM without sudo (https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md)
-NPM_PACKAGES="${HOME}/.npm-packages"
-PATH="$NPM_PACKAGES/bin:$PATH"
-unset MANPATH # delete if you already modified MANPATH elsewhere in your config
-MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
-
 # added by travis gem
 [ -f /Users/trevorwistaff/.travis/travis.sh ] && source /Users/trevorwistaff/.travis/travis.sh
