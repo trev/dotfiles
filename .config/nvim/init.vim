@@ -120,6 +120,25 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_max_files=0
 
+" The Silver Searcher
+" https://coderwall.com/p/hk_bwg/how-to-speed-up-ctrlp
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden
+    \ --ignore .git
+    \ --ignore .DS_Store
+    \ --ignore node_modules
+    \ --ignore bower_components
+    \ --ignore tmp
+    \ -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+
 " Airline settings
 let g:airline_powerline_fonts = 1 " Use powerline fonts so the bar looks good
 let g:airline#extensions#whitespace#enabled = 0 " Don't show whitespace stats
