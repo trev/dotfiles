@@ -92,6 +92,7 @@ alias rtdbp="DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bin/rails db:test:prepare"
 alias rptdbp="DISABLE_DATABASE_ENVIRONMENT_CHECK=1 RACK_ENV=test rake parallel:drop parallel:setup"
 alias rdbdc="DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bin/rails db:drop && DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bin/rails db:create"
 alias rdbdc="DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bin/rails db:drop && DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bin/rails db:create"
+alias pg_local_db='psql postgres -c "SELECT pg_database.datname, pg_database_size(pg_database.datname), pg_size_pretty(pg_database_size(pg_database.datname)) FROM pg_database ORDER by 2 DESC;"'
 
 # Function to copy ssh public key to authorized_keys
 # Usage: cpssh user@someserver.com
