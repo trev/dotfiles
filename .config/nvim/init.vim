@@ -34,11 +34,13 @@ Plugin 'garbas/vim-snipmate' " Snippet tool
 Plugin 'honza/vim-snippets' " Snippets
 Plugin 'joonty/vdebug' " Debugging tool, supports XDebug
 Plugin 'craigemery/vim-autotag' " Auto-update ctags files
-Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy searching
 Plugin 'Valloric/YouCompleteMe' "Autocomplete
 Plugin 'majutsushi/tagbar' " Tagbar
 Plugin 'mhinz/vim-startify' " Save session layouts
 Plugin 'shime/vim-livedown' " Preview mardown files in browser
+
+" Use fzf (installed with Homebrew) for fuzzy searching
+set rtp+=/usr/local/opt/fzf
 
 call vundle#end()
 
