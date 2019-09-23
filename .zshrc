@@ -126,3 +126,7 @@ export GREP_OPTIONS='--color=auto'
 
 # Fire up asdf (https://asdf-vm.com)
 . /usr/local/opt/asdf/asdf.sh
+# Enable asdf auto completion
+. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
