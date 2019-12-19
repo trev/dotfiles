@@ -68,7 +68,11 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git history-substring-search gpg-agent)
+plugins=(git history-substring-search)
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
 
 source $ZSH/oh-my-zsh.sh
 
@@ -127,6 +131,7 @@ export GREP_OPTIONS='--color=auto'
 # Fire up asdf (https://asdf-vm.com)
 . /usr/local/opt/asdf/asdf.sh
 # Enable asdf auto completion
-. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+# . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/opt/postgresql@10/bin:$PATH"

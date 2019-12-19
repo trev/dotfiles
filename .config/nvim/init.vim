@@ -1,52 +1,39 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
 runtime macros/matchit.vim    " Run vim
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.config/nvim/bundle/Vundle.vim
-call vundle#begin('~/.config/nvim/bundle')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/vundle'
+call plug#begin('~/.local/share/nvim/plugged')
 
 " Colorschemes
-Plugin 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 
 " Functionality
-Plugin 'vim-ruby/vim-ruby' " Ruby helper
-Plugin 'geoffharcourt/vim-matchit' " Matchit.vim
-Plugin 'tpope/vim-git' " Syntax highlighting for git files
-Plugin 'tpope/vim-surround' " Give shortcut commands for automatic surrounding tags, brackets, quotes...
-Plugin 'tpope/vim-fugitive' " Git command helper
-Plugin 'tpope/vim-bundler' " Bundler helper
-Plugin 'tpope/vim-rails' " Rails helper 
-Plugin 'tpope/vim-vinegar' " File browser
-Plugin 'tpope/vim-haml' " Syntax highlighting for HAML
-Plugin 'slim-template/vim-slim' " Syntax highlighting for SLIM
-Plugin 'airblade/vim-gitgutter' " Show git line change status in gutter
-Plugin 'vim-airline/vim-airline' " The cool status bar at the bottom of a vim pane
-Plugin 'vim-airline/vim-airline-themes' " Themes for status bar
-Plugin 'kchmck/vim-coffee-script' " Coffeescript helper
-Plugin 'mileszs/ack.vim' " Ack search
-Plugin 'MarcWeber/vim-addon-mw-utils' " Snipmate dependency
-Plugin 'tomtom/tlib_vim' " Snipmate dependency
-Plugin 'garbas/vim-snipmate' " Snippet tool
-Plugin 'honza/vim-snippets' " Snippets
-Plugin 'joonty/vdebug' " Debugging tool, supports XDebug
-Plugin 'craigemery/vim-autotag' " Auto-update ctags files
-Plugin 'Valloric/YouCompleteMe' "Autocomplete
-Plugin 'majutsushi/tagbar' " Tagbar
-Plugin 'mhinz/vim-startify' " Save session layouts
-Plugin 'shime/vim-livedown' " Preview mardown files in browser
+Plug 'vim-ruby/vim-ruby' " Ruby helper
+Plug 'compactcode/open.vim' " Utils for opening files.
+Plug 'geoffharcourt/vim-matchit' " Matchit.vim
+Plug 'tpope/vim-git' " Syntax highlighting for git files
+Plug 'tpope/vim-surround' " Give shortcut commands for automatic surrounding tags, brackets, quotes...
+Plug 'tpope/vim-fugitive' " Git command helper
+Plug 'tpope/vim-bundler' " Bundler helper
+Plug 'tpope/vim-rails' " Rails helper
+Plug 'tpope/vim-vinegar' " File browser
+Plug 'tpope/vim-haml' " Syntax highlighting for HAML
+Plug 'slim-template/vim-slim' " Syntax highlighting for SLIM
+Plug 'airblade/vim-gitgutter' " Show git line change status in gutter
+Plug 'vim-airline/vim-airline' " The cool status bar at the bottom of a vim pane
+Plug 'vim-airline/vim-airline-themes' " Themes for status bar
+Plug 'kchmck/vim-coffee-script' " Coffeescript helper
+Plug 'MarcWeber/vim-addon-mw-utils' " Snipmate dependency
+Plug 'tomtom/tlib_vim' " Snipmate dependency
+Plug 'garbas/vim-snipmate' " Snippet tool
+Plug 'honza/vim-snippets' " Snippets
+Plug 'craigemery/vim-autotag' " Auto-update ctags files
+Plug '/usr/local/opt/fzf' " Fuzzy finder dependency
+Plug 'junegunn/fzf.vim' " Fuzzy finder
+Plug 'majutsushi/tagbar' " Tagbar
+Plug 'mhinz/vim-startify' " Save session layouts
+Plug 'shime/vim-livedown' " Preview mardown files in browser
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " Conquer of Completion
 
-" Use fzf (installed with Homebrew) for fuzzy searching
-set rtp+=/usr/local/opt/fzf
-
-call vundle#end()
-
-syntax enable                     " Turn on syntax highlighting.
-filetype plugin indent on         " Turn on file type detection.
-filetype plugin on
+call plug#end()
 
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
@@ -79,7 +66,6 @@ set nowritebackup                 " And again.
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 let &t_Co=256                     " Explicity set to 256 colors
 
-" UNCOMMENT TO USE
 set tabstop=2                    " Global tab width.
 set shiftwidth=2                 " And again, related.
 set expandtab                    " Use spaces instead of tabs
@@ -115,31 +101,27 @@ map <leader>tm :tabmove
 " Startify settings
 let g:startify_session_dir = '~/.config/nvim/session'
 
-" CtrlP settings
-let g:ctrlp_extensions = ['tag', 'buffertag']
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_max_files=0
+" ************************************************************
+" (plugin) fzf.vim & ripgrep
+" ************************************************************
 
-" The Silver Searcher
-" https://coderwall.com/p/hk_bwg/how-to-speed-up-ctrlp
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
+let g:fzf_history_dir = '~/.fzf-history'
 
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden
-    \ --ignore .git
-    \ --ignore .DS_Store
-    \ --ignore node_modules
-    \ --ignore bower_components
-    \ --ignore tmp
-    \ -g ""'
+" Select a file to open
+nnoremap <C-p> :Files<Cr>
 
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
+" From :h fzf-vim-commands
+" Text search with preview window
+command! -bang -nargs=* Rg
+ \ call fzf#vim#grep(
+ \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+ \   <bang>0 ? fzf#vim#with_preview('up:60%')
+ \           : fzf#vim#with_preview(),
+ \   <bang>0)
+
+" Files command with preview window
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 " Airline settings
 let g:airline_powerline_fonts = 1 " Use powerline fonts so the bar looks good
@@ -245,6 +227,16 @@ nnoremap <silent> <Plug>Kwbd :<C-u>Kwbd<CR>
 " Create a mapping (e.g. in your .vimrc) like this:
 map <leader>q <Plug>Kwbd
 
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
 " Keep Vim from becoming unbareably slow when displaying long lines
 " Especially bad with data URIs to represent images in CSS files
 " set synmaxcol=150
