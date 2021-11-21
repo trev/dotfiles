@@ -113,8 +113,8 @@ alias vim="nvim"
 alias rtdbp="DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bin/rails db:test:prepare"
 alias rptdbp="DISABLE_DATABASE_ENVIRONMENT_CHECK=1 RACK_ENV=test rake parallel:drop parallel:setup"
 alias rdbdc="DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bin/rails db:drop && DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bin/rails db:create"
-alias rdbdc="DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bin/rails db:drop && DISABLE_DATABASE_ENVIRONMENT_CHECK=1 bin/rails db:create"
 alias pg_local_db='psql postgres -c "SELECT pg_database.datname, pg_database_size(pg_database.datname), pg_size_pretty(pg_database_size(pg_database.datname)) FROM pg_database ORDER by 2 DESC;"'
+alias pg_start='/Users/trevorwistaff/.asdf/installs/postgres/12.4/bin/pg_ctl -D /Users/trevorwistaff/.asdf/installs/postgres/12.4/data -l logfile start'
 
 # Function to copy ssh public key to authorized_keys
 # Usage: cpssh user@someserver.com
@@ -134,4 +134,12 @@ export GREP_OPTIONS='--color=auto'
 # . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
+#export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
+#
+fpath=(~/.zsh/completions $fpath) 
+autoload -U compinit && compinit
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
